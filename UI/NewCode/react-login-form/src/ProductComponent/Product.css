@@ -1,0 +1,19 @@
+.pop-up{
+    display: flex;
+    max-width: 260px;
+    max-height: 100px;
+    background-color: rgb(209, 165, 99);
+    box-shadow: 1px 2px 5px black;
+    border-radius: 20px;
+}
+
+.image{
+    margin: auto;
+    width: 98%;
+    height: 98%;
+    border-radius: 20px;
+}
+
+.btn{
+    width: 200px;
+}

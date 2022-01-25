@@ -1,0 +1,87 @@
+<h2 style="text-align: center">Add Category</h2>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4" >
+    <div style="width: 400px;">
+      <form #frm="ngForm" (submit)="save(frm)">
+          <div class="form-group">
+              <label for="name">Category Name</label>
+              <input type="text" class="form-control" data-toggle="tooltip" 
+                 data-placement="right" title="Enter Product Category Name" name="productCategory" ngModel>
+              
+          </div>
+  
+          <div class="form-group">
+              <label for="name">Product Measurement</label>
+              <input type="text" class="form-control" 
+                data-toggle="tooltip" data-placement="right" title="Enter Product Measurement" name="productMeasurement" ngModel>               
+          </div>
+  
+  
+          <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+  </div>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 style="text-align: center">Category</h1><br>          
+  </div>
+  <div class="panel-body">
+      <table class="table table-hover table-sm">
+          <thead class="thead-light">
+              <tr>
+                  <th>SL NO.</th>
+                  <th>Category Name</th>
+                  <th>Category Measurement</th>
+                  <th>Action</th> 
+              </tr>
+          </thead>
+          <tbody>
+               <tr *ngFor="let cat of categories; let i = index">
+                   <td>{{i+1}}</td>
+                  <td>{{cat.productCategory}}</td>
+                  <td>{{cat.productMeasurement}}</td>
+                  <td><button  class='btn btn-primary' (click)="delCategory(cat.categoryId)">Delete</button>&nbsp;
+                    <button  class='btn btn-info'
+                    data-toggle="modal" (click)="editCategory(cat)" data-target="#myModal">Update</button>
+                  </td>
+                </tr> 
+          </tbody>
+          <br>
+      </table>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4" >
+    <div style="width: 400px;">
+      <form #frm="ngForm" (submit)="update(frm)" *ngIf="editDetails.editstatus==true">
+        <h2 style="text-align: center">Update Category</h2>
+          <div class="form-group">
+              <label for="name">Category Name</label>
+              <input type="text" class="form-control" data-toggle="tooltip" 
+                 data-placement="right" title="Enter Product Category Name" name="productCategory" [ngModel]="editDetails.editcategory.productCategory">
+              
+          </div>
+  
+          <div class="form-group">
+              <label for="name">Product Measurement</label>
+              <input type="text" class="form-control" 
+                data-toggle="tooltip" data-placement="right" title="Enter Product Measurement" name="productMeasurement" [ngModel]="editDetails.editcategory.productMeasurement">               
+          </div>
+  
+  
+          <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+  </div>
+  </div>
+  <div class="col-sm-4"></div>
+</div>

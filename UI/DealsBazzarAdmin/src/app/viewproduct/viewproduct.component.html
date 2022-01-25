@@ -1,0 +1,35 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 style="text-align: center">Product Details</h1><br>          
+    </div>
+    <div class="panel-body">
+        <table class="table table-hover table-sm">
+            <thead class="thead-light">
+                <tr>
+                    <th>SL NO.</th>
+                    <th>Product Name</th>
+                    <th>Product Descritpion</th>
+                    <th>Vendor Price</th> 
+                    <th>Product Measurement Type</th>
+                    <th>Product Stock</th>
+                    <th>Product Status</th>
+                    <th>Product Images</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr *ngFor="let p of products; let i = index">
+                     <td>{{i+1}}</td>
+                    <td>{{p.productName}}</td>
+                    <td>{{p.productDescription}}</td>
+                    <td>{{p.vendorPrice}}</td>
+                    <td>{{p.productMeasuremntType}}</td>
+                    <td>{{p.productStock}}</td>
+                    <td>{{p.productStatus}}</td>
+                    <td><img src="data:image/jpeg;base64,{{p.productImages[0]}}" [height]="100" [width]="100"></td>
+                    <td><button  class='btn btn-danger' data-target="#myModal" (click)="editStatus(p.productId)" data-target="#myModal">Status</button>&nbsp; </td>
+                  </tr> 
+            </tbody><br>
+        </table>
+    </div>
+  </div>

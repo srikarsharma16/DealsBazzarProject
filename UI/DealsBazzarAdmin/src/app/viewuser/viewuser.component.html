@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 style="text-align: center">User Details</h1><br>          
+    </div>
+    <div class="panel-body">
+        <table class="table table-hover table-sm">
+            <thead class="thead-light">
+                <tr>
+                    <th>SL NO.</th>
+                    <th>User Name</th>
+                    <th>User Email</th>
+                    <th>User Phone</th> 
+                    <th>User Address</th>
+                    <th>User DOB</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr *ngFor="let u of users; let i = index">
+                     <td>{{i+1}}</td>
+                    <td>{{u.name}}</td>
+                    <td>{{u.email}}</td>
+                    <td>{{u.phone}}</td>
+                    <td>{{u.address}}</td>
+                    <td>{{u.dob}}</td>
+                  </tr> 
+            </tbody><br>
+        </table>
+    </div>
+  </div>

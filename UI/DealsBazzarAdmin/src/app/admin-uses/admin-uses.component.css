@@ -1,0 +1,39 @@
+
+body{
+    background: linear-gradient(to bottom right,#e66465, #9198e5);
+      text-align: center;
+      height: 100vh;
+  }
+  .btn-group button {
+    background-color: #04AA6D; 
+    border: 2px solid white; 
+    color: white; 
+    padding: 10px 24px; 
+    cursor: pointer; 
+    width: 50%; 
+    display: block; 
+    margin-top: 50%;
+    
+  }
+  
+  #b1 {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  #b2 {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  #b3 {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  
+  
+  
+  .btn-group button:hover {
+    background-color: #3e8e41;
+  }
