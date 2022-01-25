@@ -54,18 +54,18 @@ class Dashboard extends React.Component {
         </Link>
 
       </div>
-      
+      <div className="container card-container-dashboard">
+            <div className="row"> {/* row-cols-2 row-cols-lg-4 g-2 g-lg-3 */}
       {this.props.token != "" ? <>
         {this.props.products.filter(p => p.vendorId != this.props.token).map(product => product.productImages == null ? <p></p>
           :
 
-          <div className="container">
-            <div className="row"> {/* row-cols-2 row-cols-lg-4 g-2 g-lg-3 */}
+         
               <div className="col">
                 <div className="p-3">
                   <div className="card">
                     <div className="card-body">
-                      <img src={`data:image/jpeg;base64,${product.productImages[0]}`} className="card-img-top" alt="first product" />
+                      <img src={`data:image/jpeg;base64,${product.productImages[0]}`} className="card-img-top card-image-dashboard" alt="first product" />
                       <h5 className="card-title">{product.productName}</h5>
                       <p className="card-text"><strong>Description : </strong> {product.productDescription}</p>
                     </div>
@@ -80,16 +80,20 @@ class Dashboard extends React.Component {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            
 
           /* product.productImages==null?
           
           :<h1>akash</h1>} */
         )}
+        
       </>
+      
         : <h1>Please Login</h1>}
+        </div>
+      </div>
     </>
+    
   }
 }
 

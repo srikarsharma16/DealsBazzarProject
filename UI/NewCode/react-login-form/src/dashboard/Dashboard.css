@@ -10,6 +10,15 @@ body {
 
 }
 
+.card-container-dashboard{
+    width: 100%;
+    height: 450px;
+}
+
+.card-image-dashboard {
+    width: 80%;
+    height: 250px;
+}
 
 .mt-50 {
     margin-top: 50px
