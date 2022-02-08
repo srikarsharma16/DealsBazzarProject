@@ -5,7 +5,7 @@ body{
       height: 100vh;
   }
   .btn-group button {
-    background-color: #04AA6D; 
+    background-color: black; 
     border: 2px solid white; 
     color: white; 
     padding: 10px 24px; 
@@ -13,12 +13,12 @@ body{
     width: 50%; 
     display: block; 
     margin-top: 50%;
-    
+    font-size: larger;
   }
   
   #b1 {
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 20px; 
   }
   
   #b2 {
@@ -35,5 +35,5 @@ body{
   
   
   .btn-group button:hover {
-    background-color: #3e8e41;
+    background-color: #000000;
   }

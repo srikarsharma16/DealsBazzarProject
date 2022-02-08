@@ -225,11 +225,44 @@ public class ProductController {
 
         data = productService.updateProduct(product);
         data.setVendorId(GlobalData.token);
-        if (data == null) {
+        if (data == null) 
+        {
             return new ResponseData(400, product, "product could not be updated");
         } else {
             return new ResponseData(200, data, "product is successfully updated");
         }
     }
+
+    @PutMapping("/updateProductStatusByAdmin/{productId}")
+    public ResponseData updateStatus(@PathVariable String productId)
+    {
+        Product p= productService.validateId(productId);
+        if(p==null) {
+            return new ResponseData(404, null, productId + "Product not present in database");
+        }
+        
+        
+            if(p.getProductStock()==0)
+            {
+                p.setProductStatus(false);
+                productService.updatewithoutId(p);
+                return new ResponseData(200, p, "Status updated Successfully when stock is 0");
+            }
+
+            else if(p.isProductStatus())
+            {
+                p.setProductStatus(false);
+                productService.updatewithoutId(p);
+                return new ResponseData(200, p, "Status updated Successfully when stock is 0");
+            }
+
+            else{
+                p.setProductStatus(true);
+                productService.updatewithoutId(p);
+                return new ResponseData(200, p, "Status updated Successfully");
+            }
+    }   
+
+
 
 }

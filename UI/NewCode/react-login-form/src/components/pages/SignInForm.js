@@ -245,7 +245,7 @@ render() {
                   id="email"
                   className="formFieldInput"
                   placeholder="Enter your email"
-                  name="email" />
+                  name="email" required/>
               </div>
 
               <div className="formField">
@@ -258,7 +258,7 @@ render() {
                   id="password"
                   className="formFieldInput"
                   placeholder="Enter your password"
-                  name="password" />
+                  name="password" required/>
               </div>
 
               <div className="formField">

@@ -17,3 +17,10 @@
 .btn{
     width: 200px;
 }
+
+.producttypedropdown{
+    width: 250px;
+    height: 50px;
+    font-size: larger;
+    color: black;
+}

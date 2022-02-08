@@ -84,7 +84,7 @@ register = (event)=>{
                   id="name"
                   className="formFieldInput"
                   placeholder="Enter your full name"
-                  name="name" />
+                  name="name" required/>
               </div>
               <div className="formField">
                 <label className="formFieldLabel" htmlFor="email">
@@ -96,7 +96,7 @@ register = (event)=>{
                   id="email"
                   className="formFieldInput"
                   placeholder="Enter your email"
-                  name="email" />
+                  name="email" required/>
               </div>
 
               <div className="formField">
@@ -109,7 +109,7 @@ register = (event)=>{
                   id="number"
                   className="formFieldInput"
                   placeholder="Enter your phone number"
-                  name="phone" />
+                  name="phone" required/>
               </div>
 
               <div className="formField">
@@ -122,7 +122,7 @@ register = (event)=>{
                   id="address"
                   className="formFieldInput"
                   placeholder="Enter your Address"
-                  name="address" />
+                  name="address" required/>
               </div>
               <div className="formField">
                 <label className="formFieldLabel" htmlFor="date">
@@ -134,7 +134,7 @@ register = (event)=>{
                   id="date"
                   className="formFieldInput"
                   placeholder="Enter your date of birth"
-                  name="date" />
+                  name="date" required/>
               </div>
 
               <div className="formField">
@@ -147,7 +147,7 @@ register = (event)=>{
                   id="password"
                   className="formFieldInput"
                   placeholder="Enter your password"
-                  name="password" />
+                  name="password" required/>
               </div>
 
 

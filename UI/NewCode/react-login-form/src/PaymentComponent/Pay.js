@@ -6,6 +6,7 @@ import * as orderUseraction from '../Redux/Action/OrderAction'
 import * as productAction from '../Redux/Action/ProductAction'
 import paymentService from '../Service/PaymentService'
 import Store from '../Redux/Store'
+import './Pay.css'
 
 var mapStateToProps = state => {
     return {
@@ -70,16 +71,16 @@ class Pay extends Component {
             return <Navigate to="/dashboard"></Navigate>
         }
         return <div>
-            <h2>Pay Component</h2>
+            &ensp;&ensp;&ensp;&ensp;
             <form onSubmit={this.pay}>
                 <div className="form-group">
                     <label >Payment Type</label>
-                    <select ref={c => this.paymentType = c}>
+                    <select className="paymenttypedropdown" ref={c => this.paymentType = c}>
                         {this.props.payment.map((paymenttp) => {
-                            return <option value={paymenttp.paymentTypeId}>{paymenttp.paymentType}</option>
+                            return <option className="paymenttypedropdown" value={paymenttp.paymentTypeId}>{paymenttp.paymentType}</option>
                         })}
-                    </select>
-                    <div className="form-group">
+                    </select>&ensp;&ensp;&ensp;
+                    <div className="form-group">&ensp;
                         <label >Amount to Pay</label>
                         <input type="text" className="form-control" value={this.props.bid.bidPrice} readOnly />
                     </div>

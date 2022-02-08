@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom'
+import Navbar from '../components/Navbar'
+import './Payment.css'
 
 var mapStateToProps = state => {
     return {
@@ -20,26 +22,28 @@ class Payment extends Component {
     render() {
         
         return <div>
-            <h2>Payment Component</h2>
+            <Navbar />
+            &ensp;
             <table className="table table-bordered">
                 <tbody>
                     <tr>
                         <td rowSpan="3" colSpan="2"><img className="image" src={`data:image/jpeg;base64,${this.props.product.productImages[0]}`} alt="first image"/></td>
-                        <td>some 1</td>
-                        <td>some 2</td>
+                        
                     </tr>
                     <tr>
-                        <td>Product Name:{this.props.product.productName}</td>
-                        <td>Vendor Name:{this.props.product.vendorId}</td>
-                        <td>Vendor Price:{this.props.product.vendorPrice}</td>
+                        <td>Product Name: {this.props.product.productName}</td>
+                        <td>Vendor Name: {this.props.product.vendorId}</td>
+                        <td>Vendor Price: {this.props.product.vendorPrice}</td>
                     </tr>
                     <tr>
-                        <td>Bid Stock:{this.props.bid.bidStock}</td>
-                        <td>Bid:Price:{this.props.bid.bidPrice}</td>
+                        <td>Bid Stock: {this.props.bid.bidStock}</td>
+                        <td colSpan="2">Bid:Price: {this.props.bid.bidPrice}</td>
                     </tr>
                 </tbody>
-            </table>
-            <Link to="/pay"><button className="btn btn-success">Pay</button></Link>
+            </table>&ensp;
+            <div className="paybutton">
+            <Link to="/pay"><button className="btn btn-success paymentbutton">Pay</button></Link>
+            </div>
         </div>
     }
 }

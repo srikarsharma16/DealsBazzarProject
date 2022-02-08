@@ -72,26 +72,26 @@ class Product extends React.Component {
       <form onSubmit={this.addProduct}>
         <div className="form-group">
           <label >Product Name</label>
-          <input type="text" className="form-control" ref={c => this.productName = c} id="exampleInputEmail1" placeholder="Enter Product Name" />
+          <input type="text" className="form-control" ref={c => this.productName = c} id="exampleInputEmail1" placeholder="Enter Product Name" required/>
 
         </div>
         <div className="form-group">
           <label >Product Description</label>
-          <input type="text" className="form-control" ref={c => this.productDescription = c} id="exampleInputPassword1" placeholder="Enter Product Description" />
+          <input type="text" className="form-control" ref={c => this.productDescription = c} id="exampleInputPassword1" placeholder="Enter Product Description" required/>
         </div>
         <div className="form-group">
           <label >Product Price</label>
-          <input type="number" className="form-control" ref={c => this.vendorPrice = c} id="exampleInputPassword1" placeholder="Enter Product Price" />
+          <input type="number" className="form-control" ref={c => this.vendorPrice = c} id="exampleInputPassword1" placeholder="Enter Product Price" required/>
         </div>
         <div className="form-group">
           <label >Product Quantity</label>
-          <input type="number" className="form-control" ref={c => this.productStock = c} min="1" id="exampleInputPassword1" placeholder="Enter Product Quantity" />
+          <input type="number" className="form-control" ref={c => this.productStock = c} min="1" id="exampleInputPassword1" placeholder="Enter Product Quantity" required/>
         </div>
         <div className="form-group">
           <label >Product Category</label>
-          <select name="cars" id="cars" ref={c=>this.productCategory=c}>
+          <select className="producttypedropdown" name="cars" id="cars" ref={c=>this.productCategory=c} required>
             {this.props.categories.map((cat) => {
-            return  <option value={cat.categoryId}>{cat.productCategory}</option>
+            return  <option className="producttypedropdown" value={cat.categoryId}>{cat.productCategory}</option>
           })}
           </select>
           

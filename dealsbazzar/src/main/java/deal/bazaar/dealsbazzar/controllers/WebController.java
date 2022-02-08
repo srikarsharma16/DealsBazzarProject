@@ -101,7 +101,7 @@ public class WebController {
 			messageHelper.setFrom("srikarkalle007k@gmail.com");
 			messageHelper.setTo(email);
 			messageHelper.setSubject("Verification Mail from DealsBazzar");
-			messageHelper.setText("<b><a href=http://localhost:8080/web/vrifcation/" + email + ">click </a><h1>" + email
+			messageHelper.setText("<h3><p>You registered an account on Dealsbazzar, before being able to use your account you need to verify that this is your email address by clicking here:</p></h3><b><a href=http://localhost:8080/web/vrifcation/" + email + ">click </a><h1>" + email
 					+ "</h1></b>", true);
 			javaMailSender.send(mimeMessage);
 			return true;
@@ -117,7 +117,7 @@ public class WebController {
 		// SystemUser userdata=systemUserRepository.findById(userId).get();
 		userdata.setIsActive(true);
 		systemUserRepository.save(userdata);
-		return "<h1>" + email + "</h1>";
+		return "<p> You are registered successfully!!</p> <h1>" + email + "</h1>";
 	}
 
 	@PostMapping("/login")
